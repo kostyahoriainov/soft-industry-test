@@ -1,6 +1,0 @@
-export default {
-    SELECT_COUNTRY: 'SELECT_COUNTRY',
-    DELETE_CITY: 'DELETE_CITY',
-    EDIT_CITY: 'EDIT_CITY',
-    ADD_CITY: 'ADD_CITY',
-}
