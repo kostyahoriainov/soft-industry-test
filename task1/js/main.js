@@ -31,11 +31,11 @@ function countryList (data) {
 
     self.initActions = function() {
         $('.item p').hide().prev().click(function() {
-            $('.item p').not(this).slideUp();
-            $(this).next().not(":visible").slideDown()
+            $('.item p').not(this).slideUp().parent().removeClass('active');
+            $(this).next().not(":visible").slideDown().parent().addClass('active')
         })
 
-        $('.item button').click(function() {
+        $('.item i').click(function() {
             const parentId = $(this).parent().attr('data-id');
             self.removeItem(parentId);
             $('#root').empty();
@@ -46,9 +46,9 @@ function countryList (data) {
     self.createElement = function(item, id) {
         return newItem = $(`
         <div class="item" data-id=${id}>
-            <h4>${item.title}</h4>
-            <p>${item.text}</p>
-            <button>delete</button>
+            <h4 class="title">${item.title}</h4>
+            <p class="text">${item.text}</p>
+            <i class="fas fa-trash"></i>
         </div>
         `)
     }

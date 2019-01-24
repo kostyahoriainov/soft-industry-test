@@ -25,13 +25,13 @@ export default class City extends React.Component {
     renderEdit = () => {
         const {city} = this.props
         return (
-            <div>
+            <>
                 <h4>Edit city {city.title}</h4>
                 <input type="text" ref={title => {this.title = title}} defaultValue={city.title}/>
                 <input type="text" ref={desc => {this.desc = desc}} defaultValue={city.desc}/>
-                <button onClick={this.save}>save</button>
-                <button onClick={this.edit}>cancel</button>
-            </div>
+                <button onClick={this.save}>Submit</button>
+                <button className="cancel" onClick={this.edit}>Cancel</button>
+            </>
         )
     }
 
@@ -41,8 +41,10 @@ export default class City extends React.Component {
             <>
                 <h4>{city.title}</h4>
                 <p>{city.desc}</p>
-                <button onClick={this.edit}>edit</button>
-                <button onClick={deleteCity}>delete</button>
+                <div className="city__icons">
+                    <i className="fas fa-pen" onClick={this.edit} />
+                    <i className="fas fa-trash" onClick={deleteCity} />
+                </div>
             </>
         )
     }
@@ -50,7 +52,7 @@ export default class City extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className="city">
 
                 {
                     this.state.isEdit ? 

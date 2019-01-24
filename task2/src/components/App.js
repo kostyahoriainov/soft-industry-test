@@ -17,17 +17,20 @@ class App extends React.Component {
 
   render() {
     return(
-      <div>
+      <div className="container">
       <CountriesContainer />      
   
-      {
-        this.state.isForm ?
-        <AddCityContainer toggleForm={this.toggleForm}/> :
-        <button onClick={this.toggleForm}>+ Add city</button>
-      }
+      <div className="city_container">
+        {
+          this.state.isForm ?
+          <AddCityContainer toggleForm={this.toggleForm}/> :
+          <button className="add__Btn" onClick={this.toggleForm}>+ Add city</button>
+        }
 
-  
-      <CitiesContainer />
+    
+        <CitiesContainer />
+      </div>
+
     </div>
     )
   }

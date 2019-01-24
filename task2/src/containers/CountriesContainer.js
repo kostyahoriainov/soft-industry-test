@@ -3,7 +3,7 @@ import { selectCountry } from '../action';
 import CountriesList from '../components/CountriesList'
 
 const CountriesContainer = connect(
-    ({countries}) => ({countries}),
+    ({countries, activeCountry}) => ({countries, activeCountry}),
     { selectCountry }
 )(CountriesList)
 

@@ -1,0 +1,41 @@
+body div {
+    margin: 0 auto;
+    width: 80%;
+}
+
+.item {
+    position: relative;
+    padding: 25px 15px;
+    margin-top: 10px;
+    border-radius: 5px;
+    background-color: #D5D5D5;
+}
+
+.title {
+    margin: 0;
+    color: #3F6798;
+}
+
+.text {
+    padding: 10px;
+    border-radius: 5px;
+}
+
+i {
+    position: absolute;
+    top: 25px;
+    right: 10px;
+    color: #3F6798;
+}
+
+.active {
+    background-color: #3F6798;
+}
+
+.active .title, .active i {
+    color: black;
+}
+
+.active p {
+    background-color: #8CB0DC;
+}

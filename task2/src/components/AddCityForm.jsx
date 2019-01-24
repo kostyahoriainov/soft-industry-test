@@ -33,11 +33,21 @@ export default class AddCityForm extends React.Component {
 
     render() {
         return(
-            <form onSubmit={this.handleSubmit}>
-                <input type="text" name="title" onChange={this.handleChange} value={this.state.title}/>
-                <input type="text" name="desc" onChange={this.handleChange} value={this.state.desc}/>
+            <form className="add__Form" onSubmit={this.handleSubmit}>
+                <p>Add city</p>
+                <input type="text" 
+                        name="title" 
+                        onChange={this.handleChange} 
+                        placeholder="Country name..." 
+                        value={this.state.title}
+                        />
+                <input type="text" 
+                        name="desc" 
+                        onChange={this.handleChange} 
+                        placeholder="Country description..." 
+                        value={this.state.desc}/>
                 <button>Submit</button>
-                <button onClick={this.props.toggleForm}>Cancel</button>
+                <button className="cancel" onClick={this.props.toggleForm}>Cancel</button>
             </form> 
         )
     }
